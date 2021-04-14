@@ -104,10 +104,10 @@ console.log(Subbie);
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. Principle 1 is Global or Window Binding, "this" can access outside any object in the global scope
+    2. Principle 2 is implicit binding or can only access inside an object. 
+    3. Principle 3 is new binding, creates a new binding for "this" to reach
+    4. Principle 4 is explicit binding, picks an object for a function to reach "this"
   */
   
   
