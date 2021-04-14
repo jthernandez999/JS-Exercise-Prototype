@@ -98,6 +98,9 @@ console.log(Subbie);
  Baby.prototype = Object.create(Person.prototype);
  const bamBam = new Baby("Bam Bam", 1, "legos")
   
+ Baby.prototype.play = function() {
+   return `Playing with${this.favoriteToy}`;
+ }
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
