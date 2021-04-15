@@ -71,11 +71,22 @@ Person.prototype.toString = function () {
   */
   
  function Car(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
     this.tank = 0;
     this.odometer = 0;
   };
   Car.prototype.fill = function(gallons) {
-    return this.tank.push(gallons)
+    return this.tank += gallons;
+  }
+  Car.prototype.drive = function(distance) {
+    this.odometer += distance;
+    const milesLeft = this.milesPerGallon * this.tank;
+    this.tank = (milesLeft - distance)/this.milesPerGallon;
+    if (this.tank <= 0) {
+      return `I ran out of fuel at ${this.odometer} miles!`
+      
+    }
   }
 
 const Subbie = new Car("BatMobile", 20);
